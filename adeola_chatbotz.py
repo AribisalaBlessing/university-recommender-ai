@@ -1,8 +1,7 @@
-import streamlit as st
-import pandas as pd
-from transformers import pipeline
-from sentence_transformers import SentenceTransformer, util
-from datetime import datetime# ========== Load newly extracted data from JAMB brochure==========
+
+# from transformers import pipeline
+# from sentence_transformers import SentenceTransformer, util
+# from datetime import datetime# ========== Load newly extracted data from JAMB brochure==========
 df1= pd.read_csv("data_extract.csv", on_bad_lines='skip')
 
 # Clean missing data
