@@ -114,7 +114,7 @@ if user_input:
         st.session_state.matched_course = top_course
         st.session_state.stage = "confirm_utme"
 
-        chat("assistant", f"It seems like you're interested in *{top_course}*. Would you like to see the UTME requirements?")
+        chat("assistant", f"It seems like you're interested in {top_course.upper()}. Would you like to see the UTME requirements?")
 
         st.session_state.log.append({
             "timestamp": datetime.now().isoformat(),
