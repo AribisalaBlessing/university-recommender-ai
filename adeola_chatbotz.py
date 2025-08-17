@@ -128,8 +128,8 @@ if user_input:
         if is_positive(user_input):
             course = st.session_state.matched_course
             utme = df[df["course"] == course]["utme_subjects"].values[0]
-            chat("assistant", f"Here are the UTME requirements for *{course}*:<br>{utme}")
-            chat("assistant", "Would you also like to see the list of schools_offering offering this course?")
+            chat("assistant", f"Here are the UTME requirements for {course.upper()}:<br>{utme}")
+            chat("assistant", "Would you also like to see the list of schools in Nigeria offering this course?")
             st.session_state.stage = "confirm_schools_offering"
         else:
             chat("assistant", "Alright! Tell me another interest and I’ll try again. 😊")
